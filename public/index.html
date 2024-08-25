@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--   <meta name="author" content="Ali Al-Hasan> -->
+    <title>BlackDragon Ai</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div id="loadingScreen">
+        <p id="loadingText">Welkom ... even geduld a.u.b...</p>
+    </div>
+
+    <div id="app" style="display: none;">
+        <h1>Welkom bij BlackDragon Ai</h1>
+        <p>
+            Deze app maakt gebruik van kunstmatige intelligentie om natuurlijke gesprekken te voeren. Stel vragen, vraag om advies, of chat gewoon voor de gezelligheid. Het is alsof je met een vriend chat.
+        </p>
+        <div id="chatbox">
+            <div><span>Bot:</span>  Hallo! Hoe kan ik je vandaag helpen?</div>
+        </div>
+        <div class="con">
+            <div id="inputArea">
+                <input type="text" id="userInput" placeholder="Vul hier uw bericht in...">
+                <button id="sendButton" style="display: flex; align-items: center;">
+                    <span class="text">Versturen </span>
+                    <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" class="sparkle">
+                        <path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"></path>
+                    </svg>
+                
+                    
+                </button>
+                <button id="exportButton">Exporteer naar PDF</button>
+                <button id="clearButton">Gesprek wissen</button>
+            </div>
+        </div>
+       
+        <button id="themeToggle">mode</button>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
