@@ -75,7 +75,6 @@ userInput.addEventListener('keydown', function(event) {
         sendMessage();
     }
 });
-
 exportButton.addEventListener('click', function() {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -87,9 +86,13 @@ exportButton.addEventListener('click', function() {
         content += `${convo.sender}: ${convo.message}\n`;
     });
 
-    doc.text(content, 10, 10);
+    const pageWidth = doc.internal.pageSize.getWidth() - 20; 
+    const splitContent = doc.splitTextToSize(content, pageWidth);
+
+    doc.text(splitContent, 10, 10);
     doc.save('conversation.pdf');
 });
+
 
 
 themeToggle.addEventListener('click', function() {
